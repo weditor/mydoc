@@ -46,3 +46,4 @@ gem install bundler
 ```
 
 bundler是ruby的包管理工具，可以解决包之间的相互依赖。
+
