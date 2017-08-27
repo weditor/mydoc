@@ -27,7 +27,7 @@ $F(x_i, y_i) \ge 1$展开如下: $$(w^{T} \cdot x_i+b)*y_i \ge 1$$
 
 $$\Phi(\alpha, w, b) = \begin{Vmatrix}w\end{Vmatrix}^2 - \sum_{i=0}^n{\left\{\alpha_i(w^{T} \cdot x_i+b)*y_i \right\}}$$
 
-求解: 
+求解:
 $$\begin{cases} \frac {\partial \Phi}{\partial w} = 0 &\Rightarrow w=\sum_{i=0}^n\alpha_i y_i x_i\ \\
  \frac {\partial \Phi}{\partial b} = 0 &\Rightarrow \sum_{i=0}^na_iy_i=0 \end{cases}$$
 

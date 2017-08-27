@@ -1,7 +1,7 @@
-
 # C++ 调试
 
 以下代码会自动打印每一层函数调用流程，以缩进方式展示。
+
 ```cpp
 #include <iostream>
 #include <stdio.h>
@@ -32,7 +32,7 @@ extern "C" {
         if (1 == sscanf(symbol, "%127s", func_name)) {
             return func_name;
         }
-    
+
         //if all else fails, just return the symbol
         return symbol;
     }
@@ -103,11 +103,13 @@ int main() {
 ```
 
 make命令如下
+
 ```shell
 g++ -o main -finstrument-functions main.cpp -O0 -rdynamic
 ```
 
 执行后输出如下
+
 ```shell
     enter->./main()
         enter->./main()
@@ -139,11 +141,13 @@ void __cyg_profile_func_exit(void *this_func, void *call_site)
 ### 2. backtrace
 
 头文件:
+
 ```cpp
 #include <execinfo.h>
 ```
 
 此头文件包含三个函数：
+
 ```cpp
 // 将最多__size层堆栈指针存放到__array数组。
 int backtrace(void **__array, int __size);
